@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cmtoolkit"
+version = "0.1.0"
+description = "Symbolic and numeric building blocks for computational continuum mechanics"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = ["sympy>=1.13", "numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["pytest", "matplotlib", "jupyter"]
+
+[tool.setuptools]
+packages = ["cmtoolkit"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
